@@ -26,7 +26,7 @@ export default function CustomTable9({
                     index === 0
                       ? {
                           ...Styles.header,
-                          // width: "35px",
+                          width: "40px",
                           paddingLeft: 10,
                         }
                       : Styles.header
