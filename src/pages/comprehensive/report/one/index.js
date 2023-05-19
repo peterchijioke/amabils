@@ -4,14 +4,18 @@ import CustomTable from "./layout/CustomTable";
 import {
   data,
   data2,
+  dataT6,
   footer,
+  footerT6,
   header,
   header2,
   header3,
+  headerT6,
   lpoData,
   lpoFooter,
   lpoHeader,
 } from "./data";
+import CustomTable6 from "./layout/CustomTable6";
 
 export default function index() {
   return (
@@ -40,6 +44,12 @@ export default function index() {
           data={lpoData}
           footer={lpoFooter}
           header={lpoHeader}
+        />
+        <CustomTable6
+          title="Expenses"
+          data={dataT6}
+          footer={footerT6}
+          header={headerT6}
         />
       </div>
     </div>

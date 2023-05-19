@@ -309,8 +309,64 @@ const lpoFooter = [
     value: "283,922.00 ",
   },
 ];
+const footerT6 = [
+  {
+    id: `${Math.random()}`,
+    value: "",
+  },
+  {
+    id: `${Math.random()}`,
+    value: "Total",
+  },
+  {
+    id: `${Math.random()}`,
+    value: "283,922.00 ",
+  },
+];
+const dataT6 = [
+  {
+    id: `${Math.random()}`,
+    sn: "01 ",
+    exp: "Novare Center ",
+    amount: "122,293.00 ",
+  },
+  {
+    id: `${Math.random()}`,
+    sn: "02 ",
+    exp: "Novare Center ",
+    amount: "122,293.00 ",
+  },
+  {
+    id: `${Math.random()}`,
+    sn: "03 ",
+    exp: "Novare Center ",
+    amount: "122,293.00 ",
+  },
+  {
+    id: `${Math.random()}`,
+    sn: "04 ",
+    exp: "Novare Center ",
+    amount: "122,293.00 ",
+  },
+];
+const headerT6 = [
+  {
+    id: `${Math.random()}`,
+    value: "S/N",
+  },
+  {
+    id: `${Math.random()}`,
+    value: "Expenses Name",
+  },
+  {
+    id: `${Math.random()}`,
+    value: "Amount",
+  },
+];
 
 export {
+  footerT6,
+  headerT6,
   data,
   lpoData,
   lpoHeader,
@@ -318,6 +374,7 @@ export {
   data2,
   header,
   header2,
+  dataT6,
   header3,
   footer,
 };

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CustomTable({
+export default function CustomTable6({
   header = [],
   footer = [],
   data = [],
@@ -54,10 +54,18 @@ export default function CustomTable({
               {footer.map((item, index) => (
                 <td
                   key={Math.random()}
-                  style={{
-                    ...Styles.th,
-                    textAlign: item.value == "Total" && "end",
-                  }}
+                  style={
+                    index == 0
+                      ? {
+                          ...Styles.th,
+                          backgroundColor: "white",
+                          textAlign: item.value == "Total" && "end",
+                        }
+                      : {
+                          ...Styles.th,
+                          textAlign: item.value == "Total" && "end",
+                        }
+                  }
                 >
                   {item.value}
                 </td>
