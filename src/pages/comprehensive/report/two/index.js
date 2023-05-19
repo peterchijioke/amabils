@@ -1,6 +1,22 @@
 import React from "react";
+import CustomTable from "../two/layout/CustomTable";
+import { dataT1, headerT1 } from "./data";
 
 export default function index() {
+  const footer = [
+    {
+      id: `${Math.random()}`,
+      value: "",
+    },
+    {
+      id: `${Math.random()}`,
+      value: "Total",
+    },
+    {
+      id: `${Math.random()}`,
+      value: "283,922.00 ",
+    },
+  ];
   return (
     <div style={Styles.wrapper}>
       <div style={Styles.tp}>
@@ -12,6 +28,12 @@ export default function index() {
             - 20 May, 2023
           </span>
         </div>
+        <CustomTable
+          title="Expenses"
+          data={dataT1}
+          footer={footer}
+          header={headerT1}
+        />
       </div>
     </div>
   );
