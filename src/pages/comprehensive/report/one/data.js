@@ -421,6 +421,36 @@ const dataT8 = [
     amount: "Oloyode Haruna Ishola ",
   },
 ];
+const dataT9 = [
+  {
+    id: `${Math.random()}`,
+    tank: 1,
+    pms: "122,293.00  ",
+    ago: "122,293.00  ",
+    dpk: "122,293.00 ",
+  },
+  {
+    id: `${Math.random()}`,
+    tank: 1,
+    pms: "122,293.00  ",
+    ago: "122,293.00  ",
+    dpk: "122,293.00 ",
+  },
+  {
+    id: `${Math.random()}`,
+    tank: 1,
+    pms: "122,293.00  ",
+    ago: "122,293.00  ",
+    dpk: "122,293.00 ",
+  },
+  {
+    id: `${Math.random()}`,
+    tank: 1,
+    pms: "122,293.00  ",
+    ago: "122,293.00  ",
+    dpk: "122,293.00 ",
+  },
+];
 const headerT6 = [
   {
     id: `${Math.random()}`,
@@ -449,6 +479,24 @@ const headerT8 = [
     value: "Confirmed By",
   },
 ];
+const headerT9 = [
+  {
+    id: `${Math.random()}`,
+    value: "Tank",
+  },
+  {
+    id: `${Math.random()}`,
+    value: "PMS",
+  },
+  {
+    id: `${Math.random()}`,
+    value: "AGO",
+  },
+  {
+    id: `${Math.random()}`,
+    value: "DPK",
+  },
+];
 
 export {
   footerT6,
@@ -463,7 +511,9 @@ export {
   header2,
   dataT6,
   dataT8,
+  headerT9,
   header3,
   footer,
   headerT8,
+  dataT9,
 };
