@@ -9,17 +9,20 @@ import {
   data2,
   dataT2,
   dataT6,
+  dataT8,
   footer,
   footerT6,
   header,
   header2,
   header3,
   headerT6,
+  headerT8,
   lpoData,
   lpoFooter,
   lpoHeader,
 } from "./data";
 import CustomTable6 from "./layout/CustomTable6";
+import CustomTable8 from "./layout/CustomTable8";
 
 export default function index() {
   return (
@@ -54,6 +57,11 @@ export default function index() {
           data={dataT6}
           footer={footerT6}
           header={headerT6}
+        />
+        <CustomTable8
+          title="Product Balance Carried Forward"
+          data={dataT8}
+          header={headerT8}
         />
       </div>
     </div>

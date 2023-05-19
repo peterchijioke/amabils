@@ -401,6 +401,26 @@ const dataT6 = [
     amount: "122,293.00 ",
   },
 ];
+const dataT8 = [
+  {
+    id: `${Math.random()}`,
+    sn: "PMS ",
+    exp: "122,293.00  ",
+    amount: "Oloyode Haruna Ishola ",
+  },
+  {
+    id: `${Math.random()}`,
+    sn: "AGO ",
+    exp: "122,293.00  ",
+    amount: "Oloyode Haruna Ishola ",
+  },
+  {
+    id: `${Math.random()}`,
+    sn: "GPK ",
+    exp: "122,293.00  ",
+    amount: "Oloyode Haruna Ishola ",
+  },
+];
 const headerT6 = [
   {
     id: `${Math.random()}`,
@@ -413,6 +433,20 @@ const headerT6 = [
   {
     id: `${Math.random()}`,
     value: "Amount",
+  },
+];
+const headerT8 = [
+  {
+    id: `${Math.random()}`,
+    value: "Product",
+  },
+  {
+    id: `${Math.random()}`,
+    value: "LTR (QTY)",
+  },
+  {
+    id: `${Math.random()}`,
+    value: "Confirmed By",
   },
 ];
 
@@ -428,6 +462,8 @@ export {
   dataT2,
   header2,
   dataT6,
+  dataT8,
   header3,
   footer,
+  headerT8,
 };
