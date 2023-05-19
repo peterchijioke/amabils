@@ -1,9 +1,12 @@
 import React from "react";
 import CustomTable1 from "./layout/CustomTable1";
 import CustomTable from "./layout/CustomTable";
+import CustomTable3 from "./layout/CustomTable3";
+import CustomTable2 from "./layout/CustomeTable2";
 import {
   data,
   data2,
+  dataT2,
   dataT6,
   footer,
   footerT6,
@@ -30,14 +33,14 @@ export default function index() {
           </span>
         </div>
         <CustomTable1 />
-        <CustomTable
+        <CustomTable2
           title="Product Dispense"
-          data={data}
+          data={dataT2}
           footer={footer}
           header={header}
         />
 
-        <CustomTable data={data2} footer={footer} header={header2} />
+        <CustomTable3 data={data2} footer={footer} header={header2} />
         <CustomTable data={data} footer={footer} header={header3} />
         <CustomTable
           title="LPO"
