@@ -5,7 +5,7 @@ import ReportTwo from "./pages/comprehensive/report/two";
 export default function App() {
   return (
     <div>
-      <ReportOne />
+      {/* <ReportOne /> */}
       <ReportTwo />
     </div>
   );
