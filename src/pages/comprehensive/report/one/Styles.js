@@ -1,2 +1,0 @@
-const Styles = {};
-export { Styles };
