@@ -2,7 +2,7 @@ import React from "react";
 import CustomTable1 from "./layout/CustomTable1";
 import CustomTable5 from "./layout/CustomTable5";
 import CustomTable3 from "./layout/CustomTable3";
-import CustomTable4 from "./layout/CustomeTable4";
+import CustomTable4 from "./layout/CustomTable4";
 import CustomTable2 from "./layout/CustomeTable2";
 import {
   data,
