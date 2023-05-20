@@ -26,6 +26,7 @@ import {
 import CustomTable6 from "./layout/CustomTable6";
 import CustomTable8 from "./layout/CustomTable8";
 import CustomTable9 from "./layout/CustomTable9";
+import CustomTable7 from "./layout/CustomTable7";
 
 export default function index() {
   return (
@@ -61,6 +62,7 @@ export default function index() {
           footer={footerT6}
           header={headerT6}
         />
+        <CustomTable7 />
         <CustomTable8
           title="Product Balance Carried Forward"
           data={dataT8}
