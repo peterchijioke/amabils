@@ -137,7 +137,6 @@ const Styles = {
     fontStyle: "normal",
     lineHeight: "22px",
     textAlign: "start",
-    // width: "128px",
     color: "white",
     height: "40px",
     fontSize: 14,
@@ -160,7 +159,6 @@ const Styles = {
     borderRadius: "4px",
     fontSize: 14,
     padding: "5px",
-    // paddingRight: "auto",
     fontFamily: "'Nunito', sans-serif",
   },
 };
