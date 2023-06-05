@@ -19,6 +19,7 @@ const Styles = {
     backgroundColor: "#F4F4F4",
     display: "flex",
     flexDirection: "column",
+    flex: 1,
   },
 };
 

@@ -15,7 +15,10 @@ function TopCard(props) {
         </div>
       </div>
       <div className="t-card-bottom" style={{ ...props.arrowStyle }}>
-        <ArrowRightAltIcon style={{ color: "#054834", fontSize: 40 }} />
+        <img
+          src={require("../../img/Arrow.svg").default}
+          style={{ color: "#054834", marginBottom: 20 }}
+        />
       </div>
     </div>
   );

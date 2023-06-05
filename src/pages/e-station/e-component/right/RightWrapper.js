@@ -58,6 +58,7 @@ function RightWrapper(props) {
         amount="254"
         title="Individual Customers"
       />
+
       <div className="product-dis">
         <div className="donut-chart">
           <label className="dou-title">Product Dispensed</label>
@@ -121,7 +122,7 @@ function RightWrapper(props) {
             marginBottom: 20,
           }}
           onClick={() => {}}
-          style={{ margin: "1rem 0px 1rem 0px" }}
+          // style={{ margin: "1rem 0px 1rem 0px" }}
           icon={
             <img
               src={require("../../img/pump (1).svg").default}
