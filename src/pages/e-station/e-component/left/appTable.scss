@@ -1,9 +1,11 @@
 $font:'Poppins';
-.table-container{
-  width: 100%;
-height: max-content;
-padding: 10px;
-}
+$shadow: 0px 0px 26px rgba(0, 0, 0, 0.04);
+;
+// .table-container{
+//   width: 100%;
+// height: max-content;
+// padding: 10px;
+// }
 #app-table{
   border-collapse: collapse;
   width: 100%;
@@ -40,3 +42,34 @@ padding: 10px;
   border-radius: 50%;
   background-color: aquamarine;
 }
+.button_{
+    width: 40px;
+      height: 40px;
+      border: none;
+      background:#06805B;
+      cursor: pointer;
+      color: #ffffff;
+      margin: 2px;
+      border-radius: 10px;
+      box-shadow: $shadow;
+      
+  }
+  .button_:hover {
+    background: "#E3E3E3";
+    color: #06805B;
+  }
+  .button-wrap{
+    display: flex;
+    justify-content: flex-end;
+      width: 100%;
+    }
+        @media screen and (max-width:"900px") {
+          #app-table{
+            display: none;
+          }
+
+
+            .button-wrap {
+          display: none;
+        }
+        }

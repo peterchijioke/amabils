@@ -5,7 +5,7 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 function TopCard(props) {
   return (
-    <div className="t-card">
+    <div className="t-card" {...props}>
       <div className="t-card-top">
         <div className="icon-shade"></div>
         <div className="icon-wrapper">{props.icon}</div>
@@ -14,7 +14,7 @@ function TopCard(props) {
           <label className="tcard-title">{props.title}</label>
         </div>
       </div>
-      <div className="t-card-bottom">
+      <div className="t-card-bottom" style={{ ...props.arrowStyle }}>
         <ArrowRightAltIcon style={{ color: "#054834", fontSize: 40 }} />
       </div>
     </div>

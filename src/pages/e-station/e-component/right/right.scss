@@ -1,8 +1,36 @@
 .r-wrapper{
   width: 30%;
   height: 500px;
-  background-color: cyan;
-  padding: 0px 0px 10px 5px;
+  // background-color: white;
+  // padding: 0px 0px 10px 5px;
+}
+
+.donut-chart{
+  height: 300px;
+  width: 100%;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  span{
+    font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      margin-left: 10px;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.404212px;
+      color: #066348;
+  }
+  .donut-chart-wrapper{
+    width: 95%;
+    align-self: center;
+    height: 250px;
+    background: red;
+    border-radius: 9px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
 }
 
 @media screen and (max-width:'900px') {
