@@ -6,30 +6,24 @@
 }
 
 .donut-chart{
-  height: 300px;
+  height: 350px;
   width: 100%;
   border-radius: 9px;
   display: flex;
   flex-direction: column;
-  span{
-    font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 600;
-      margin-left: 10px;
-      font-size: 18px;
-      line-height: 30px;
-      letter-spacing: 0.404212px;
-      color: #066348;
-  }
+ 
   .donut-chart-wrapper{
     width: 95%;
     align-self: center;
     height: 250px;
-    // background: red;
+    position: relative;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     border-radius: 9px;
     align-items: center;
     justify-content: center;
     display: flex;
+    flex-direction: column;
   }
 }
 .product-dis {
@@ -40,6 +34,21 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.product-label-doughnut{
+  font-family: "Poppins";
+    text-align: center;
+    color: #000000;
+}
+ .dou-title {
+   font-family: 'Poppins';
+   font-style: normal;
+   font-weight: 600;
+   margin-left: 10px;
+   font-size: 18px;
+   line-height: 30px;
+   letter-spacing: 0.404212px;
+   color: #066348
+ }
 
 @media screen and (max-width:'900px') {
   .r-wrapper{

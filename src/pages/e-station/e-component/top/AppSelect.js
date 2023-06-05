@@ -31,7 +31,7 @@ export default function AppSelect({ data = [] }) {
       </div>
       <div
         style={{
-          display: open && "none",
+          display: open ? "block" : "none",
         }}
         className="s-dropdown-card"
       >

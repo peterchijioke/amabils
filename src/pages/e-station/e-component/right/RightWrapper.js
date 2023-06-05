@@ -1,11 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./right.scss";
-import PersonIcon from "@mui/icons-material/Person";
-import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Doughnut } from "react-chartjs-2";
+
 import useMediaQuery from "@mui/material/useMediaQuery";
 import RCard from "./RCard";
+import CircleIcon from "@mui/icons-material/Circle";
+import DotProduct from "./DotProduct";
 function RightWrapper(props) {
+  ChartJS.register(ArcElement, Tooltip, Legend);
+  ChartJS.overrides["doughnut"].plugins.legend.position = "bottom";
+  ChartJS.overrides["doughnut"].plugins.legend.display = false;
+  const data = {
+    labels: ["PMS", "DPK", "AGO"],
+    datasets: [
+      {
+        label: "# of Votes",
+        data: [12, 19, 3],
+        backgroundColor: ["#399A19", "#35393E", "#FFA010"],
+        borderColor: ["#399A19", "#35393E", "#FFA010"],
+        borderWidth: 0.5,
+      },
+    ],
+  };
   const mobile = useMediaQuery("(max-width:900px)");
   const tablet = useMediaQuery("(min-width:700px)");
   return (
@@ -42,14 +60,24 @@ function RightWrapper(props) {
       />
       <div className="product-dis">
         <div className="donut-chart">
-          <span>Product Dispensed</span>
+          <label className="dou-title">Product Dispensed</label>
           <div className="donut-chart-wrapper">
-            <img
-              src={require("../../img/chat2.svg").default}
-              style={{ color: "#fff", width: 100, height: 100 }}
-            />
+            <Doughnut data={data} />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <DotProduct product="PMS" />
+            <DotProduct product="AGO" />
+            <DotProduct product="DPK" />
           </div>
         </div>
+
         <RCard
           dot
           arrowStyle={{
