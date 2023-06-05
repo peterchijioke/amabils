@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./right.scss";
-import TopCard from "../top/TopCard";
 import PersonIcon from "@mui/icons-material/Person";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import useMediaQuery from "@mui/material/useMediaQuery";
