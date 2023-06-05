@@ -27,7 +27,12 @@ function TopWrapper(props) {
         <div className="card-wrapper">
           <TopCard
             arrowStyle={{ left: !mobile ? "30px" : tablet ? "25rem" : "45px" }}
-            icon={<AccountBalanceWallet style={{ color: "#fff" }} />}
+            icon={
+              <img
+                src={require("../../img/wallet.svg").default}
+                style={{ color: "#fff", width: 30, height: 30 }}
+              />
+            }
             amount="NGN 530,000"
             title="Wallet Balance"
           />
@@ -35,19 +40,34 @@ function TopWrapper(props) {
             arrowStyle={{ left: !mobile ? "30px" : tablet ? "25rem" : "45px" }}
             amount="NGN 220,000"
             title="Assets"
-            icon={<Description style={{ color: "#fff" }} />}
+            icon={
+              <img
+                src={require("../../img/asset.svg").default}
+                style={{ color: "#fff", width: 30, height: 30 }}
+              />
+            }
           />
           <TopCard
             arrowStyle={{ left: !mobile ? "30px" : tablet ? "25rem" : "45px" }}
             amount="NGN 230,000"
             title="Liability"
-            icon={<Note style={{ color: "#fff" }} />}
+            icon={
+              <img
+                src={require("../../img/liability.svg").default}
+                style={{ color: "#fff", width: 30, height: 30 }}
+              />
+            }
           />
           <TopCard
             arrowStyle={{ left: !mobile ? "30px" : tablet ? "25rem" : "45px" }}
             amount="NGN 350,000"
             title="Sales"
-            icon={<Receipt style={{ color: "#fff" }} />}
+            icon={
+              <img
+                src={require("../../img/sales.svg").default}
+                style={{ color: "#fff", width: 30, height: 30 }}
+              />
+            }
           />
         </div>
       </div>

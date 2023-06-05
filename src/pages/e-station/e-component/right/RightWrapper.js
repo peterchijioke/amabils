@@ -14,7 +14,12 @@ function RightWrapper(props) {
         onClick={() => {}}
         arrowStyle={{ left: !mobile ? "70px" : tablet ? "25rem" : "45px" }}
         style={{ width: "100%", backgroundColor: " #F6FFFF" }}
-        icon={<PersonIcon style={{ color: "#fff" }} />}
+        icon={
+          <img
+            src={require("../../img/user.svg").default}
+            style={{ color: "#fff" }}
+          />
+        }
         amount="201"
         title="Corporate Customers"
       />
@@ -26,7 +31,12 @@ function RightWrapper(props) {
           marginTop: "15px",
           backgroundColor: " #F6FFFF",
         }}
-        icon={<SupervisorAccountIcon style={{ color: "#fff" }} />}
+        icon={
+          <img
+            src={require("../../img/users.svg").default}
+            style={{ color: "#fff" }}
+          />
+        }
         amount="254"
         title="Individual Customers"
       />
@@ -43,7 +53,12 @@ function RightWrapper(props) {
           }}
           type="PMS"
           onClick={() => {}}
-          icon={<SupervisorAccountIcon style={{ color: "#fff" }} />}
+          icon={
+            <img
+              src={require("../../img/pump (1).svg").default}
+              style={{ color: "#fff" }}
+            />
+          }
           amount="23, 281.00 Liters"
           title="Total PMS Dispensed"
         />
@@ -56,7 +71,12 @@ function RightWrapper(props) {
           type="DPK"
           style={{ margin: "1rem 0px 1rem 0px" }}
           onClick={() => {}}
-          icon={<SupervisorAccountIcon style={{ color: "#fff" }} />}
+          icon={
+            <img
+              src={require("../../img/pump (1).svg").default}
+              style={{ color: "#fff" }}
+            />
+          }
           amount="23, 281.00 Liters"
           title="Total PMS Dispensed"
         />
@@ -69,7 +89,12 @@ function RightWrapper(props) {
           }}
           onClick={() => {}}
           style={{ margin: "1rem 0px 1rem 0px" }}
-          icon={<SupervisorAccountIcon style={{ color: "#fff" }} />}
+          icon={
+            <img
+              src={require("../../img/pump (1).svg").default}
+              style={{ color: "#fff" }}
+            />
+          }
           amount="23, 281.00 Liters"
           title="Total PMS Dispensed"
         />
