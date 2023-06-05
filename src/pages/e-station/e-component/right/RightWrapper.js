@@ -7,11 +7,12 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import RCard from "./RCard";
 function RightWrapper(props) {
   const mobile = useMediaQuery("(max-width:900px)");
+  const tablet = useMediaQuery("(min-width:700px)");
   return (
     <div className="r-wrapper">
       <RCard
         onClick={() => {}}
-        arrowStyle={{ left: !mobile ? "70px" : "45px" }}
+        arrowStyle={{ left: !mobile ? "70px" : tablet ? "25rem" : "45px" }}
         style={{ width: "100%", backgroundColor: " #F6FFFF" }}
         icon={<PersonIcon style={{ color: "#fff" }} />}
         amount="201"
@@ -19,7 +20,7 @@ function RightWrapper(props) {
       />
       <RCard
         onClick={() => {}}
-        arrowStyle={{ left: !mobile ? "70px" : "45px" }}
+        arrowStyle={{ left: !mobile ? "70px" : tablet ? "25rem" : "45px" }}
         style={{
           width: "100%",
           marginTop: "15px",
@@ -36,14 +37,21 @@ function RightWrapper(props) {
         </div>
         <RCard
           dot
-          style={{ margin: "1rem 0px 1rem 0px" }}
+          arrowStyle={{
+            left: !mobile ? "60px" : tablet ? "25rem" : "30px",
+            marginBottom: 20,
+          }}
           type="PMS"
           onClick={() => {}}
           icon={<SupervisorAccountIcon style={{ color: "#fff" }} />}
-          amount="23,281.00 Liters"
+          amount="23, 281.00 Liters"
           title="Total PMS Dispensed"
         />
         <RCard
+          arrowStyle={{
+            left: !mobile ? "60px" : tablet ? "25rem" : "30px",
+            marginBottom: 20,
+          }}
           dot
           type="DPK"
           style={{ margin: "1rem 0px 1rem 0px" }}
@@ -55,6 +63,10 @@ function RightWrapper(props) {
         <RCard
           dot
           type="AGO"
+          arrowStyle={{
+            left: !mobile ? "60px" : tablet ? "25rem" : "30px",
+            marginBottom: 20,
+          }}
           onClick={() => {}}
           style={{ margin: "1rem 0px 1rem 0px" }}
           icon={<SupervisorAccountIcon style={{ color: "#fff" }} />}

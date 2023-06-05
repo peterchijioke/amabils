@@ -4,9 +4,9 @@ $shadow_white : #ffffff;
 $shadow:0px 0px 26px rgba(0, 0, 0, 0.04);;
 $app_green:#054834;
 @mixin date-select(){
-  width: 174px;
+ 
   height: 40px;
-
+  overflow: hidden;
   background: rgba(248, 255, 253, 0.7);
   border: 1.5px solid $ash;
   border-radius: 5px;
@@ -31,6 +31,11 @@ $app_green:#054834;
 
 // ================Select Component========
 .select-wrapper{
+  width: 174px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2px;
  @include date-select();
 }
 
@@ -123,7 +128,6 @@ padding: 15px;
 .date-top::-webkit-calendar-picker-indicator{
 
    background-color: #06805B;
-
     padding: 10px;
     border-radius: 2px;
    

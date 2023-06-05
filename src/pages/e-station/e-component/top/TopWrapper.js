@@ -10,10 +10,13 @@ import {
   Receipt,
   Note,
 } from "@mui/icons-material";
+import { useMediaQuery } from "@mui/material";
 
 const data = [];
 
 function TopWrapper(props) {
+  const mobile = useMediaQuery("(max-width:900px)");
+  const tablet = useMediaQuery("(min-width:700px)");
   return (
     <div style={{ display: "flex", width: "100%" }}>
       <div className="e-top-wrapper">
@@ -23,21 +26,25 @@ function TopWrapper(props) {
         </div>
         <div className="card-wrapper">
           <TopCard
+            arrowStyle={{ left: !mobile ? "30px" : tablet ? "25rem" : "45px" }}
             icon={<AccountBalanceWallet style={{ color: "#fff" }} />}
             amount="NGN 530,000"
             title="Wallet Balance"
           />
           <TopCard
+            arrowStyle={{ left: !mobile ? "30px" : tablet ? "25rem" : "45px" }}
             amount="NGN 220,000"
             title="Assets"
             icon={<Description style={{ color: "#fff" }} />}
           />
           <TopCard
+            arrowStyle={{ left: !mobile ? "30px" : tablet ? "25rem" : "45px" }}
             amount="NGN 230,000"
             title="Liability"
             icon={<Note style={{ color: "#fff" }} />}
           />
           <TopCard
+            arrowStyle={{ left: !mobile ? "30px" : tablet ? "25rem" : "45px" }}
             amount="NGN 350,000"
             title="Sales"
             icon={<Receipt style={{ color: "#fff" }} />}
