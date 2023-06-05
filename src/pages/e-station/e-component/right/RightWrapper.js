@@ -43,7 +43,12 @@ function RightWrapper(props) {
       <div className="product-dis">
         <div className="donut-chart">
           <span>Product Dispensed</span>
-          <div className="donut-chart-wrapper"></div>
+          <div className="donut-chart-wrapper">
+            <img
+              src={require("../../img/chat2.svg").default}
+              style={{ color: "#fff", width: 100, height: 100 }}
+            />
+          </div>
         </div>
         <RCard
           dot
