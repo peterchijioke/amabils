@@ -170,7 +170,10 @@ export default function AppTable() {
                     justifyContent: "space-around",
                   }}
                 >
-                  <img src={item.image} className="profile-image" />
+                  <img
+                    src={require("../../img/image.svg").default}
+                    className="profile-image"
+                  />
                   <label>{item.account_name}</label>
                 </div>
               </td>

@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./rCard.scss";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { Circle } from "@mui/icons-material";
 
 function RCard(props) {

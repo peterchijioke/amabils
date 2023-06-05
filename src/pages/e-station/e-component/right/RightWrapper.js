@@ -30,7 +30,7 @@ function RightWrapper(props) {
     <div className="r-wrapper">
       <RCard
         onClick={() => {}}
-        arrowStyle={{ left: !mobile ? "70px" : tablet ? "25rem" : "45px" }}
+        arrowStyle={styles(mobile, tablet).arrowStyle2}
         style={{ width: "100%", backgroundColor: " #F6FFFF" }}
         icon={
           <img
@@ -43,7 +43,7 @@ function RightWrapper(props) {
       />
       <RCard
         onClick={() => {}}
-        arrowStyle={{ left: !mobile ? "70px" : tablet ? "25rem" : "45px" }}
+        arrowStyle={styles(mobile, tablet).arrowStyle2}
         style={{
           width: "100%",
           marginTop: "15px",
@@ -59,20 +59,13 @@ function RightWrapper(props) {
         title="Individual Customers"
       />
 
-      <div className="product-dis">
+      <div style={styles(mobile, tablet).doughnutWrap}>
         <div className="donut-chart">
           <label className="dou-title">Product Dispensed</label>
           <div className="donut-chart-wrapper">
             <Doughnut data={data} />
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
+          <div style={styles(mobile, tablet).iconsWrapper}>
             <DotProduct product="PMS" />
             <DotProduct product="AGO" />
             <DotProduct product="DPK" />
@@ -81,10 +74,7 @@ function RightWrapper(props) {
 
         <RCard
           dot
-          arrowStyle={{
-            left: !mobile ? "60px" : tablet ? "25rem" : "30px",
-            marginBottom: 20,
-          }}
+          arrowStyle={styles(mobile, tablet).arrowStyle}
           type="PMS"
           onClick={() => {}}
           icon={
@@ -97,10 +87,7 @@ function RightWrapper(props) {
           title="Total PMS Dispensed"
         />
         <RCard
-          arrowStyle={{
-            left: !mobile ? "60px" : tablet ? "25rem" : "30px",
-            marginBottom: 20,
-          }}
+          arrowStyle={styles(mobile, tablet).arrowStyle}
           dot
           type="DPK"
           style={{ margin: "1rem 0px 1rem 0px" }}
@@ -117,12 +104,8 @@ function RightWrapper(props) {
         <RCard
           dot
           type="AGO"
-          arrowStyle={{
-            left: !mobile ? "60px" : tablet ? "25rem" : "30px",
-            marginBottom: 20,
-          }}
+          arrowStyle={styles(mobile, tablet).arrowStyle}
           onClick={() => {}}
-          // style={{ margin: "1rem 0px 1rem 0px" }}
           icon={
             <img
               src={require("../../img/pump (1).svg").default}
@@ -137,6 +120,25 @@ function RightWrapper(props) {
   );
 }
 
+const styles = (mobile, tablet) => ({
+  iconsWrapper: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  arrowStyle: {
+    left: !mobile ? "45px" : tablet ? "25rem" : "30px",
+    marginBottom: 20,
+  },
+  doughnutWrap: {
+    padding: !mobile ? 10 : 0,
+    background: "white",
+    marginTop: "1rem",
+    borderRadius: 9,
+  },
+  arrowStyle2: { left: !mobile ? "70px" : tablet ? "25rem" : "45px" },
+});
 RightWrapper.propTypes = {};
 
 export default RightWrapper;
