@@ -71,7 +71,6 @@ function RightWrapper(props) {
             <DotProduct product="DPK" />
           </div>
         </div>
-
         <RCard
           dot
           arrowStyle={styles(mobile, tablet).arrowStyle}
@@ -116,6 +115,23 @@ function RightWrapper(props) {
           title="Total PMS Dispensed"
         />
       </div>
+      <RCard
+        onClick={() => {}}
+        arrowStyle={styles(mobile, tablet).arrowStyle2}
+        style={{
+          width: "100%",
+          marginTop: "15px",
+          backgroundColor: "white",
+        }}
+        icon={
+          <img
+            src={require("../../img/asset.svg").default}
+            style={{ color: "#fff" }}
+          />
+        }
+        amount="NGN 40, 000"
+        title="Incoming Orders"
+      />
     </div>
   );
 }
