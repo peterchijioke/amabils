@@ -6,6 +6,7 @@ $app_green:#054834;
 @mixin date-select(){
   width: 174px;
   height: 40px;
+
   background: rgba(248, 255, 253, 0.7);
   border: 1.5px solid $ash;
   border-radius: 5px;
@@ -38,6 +39,9 @@ $app_green:#054834;
   @include date-select();
   margin: 0px;
   padding: 0px;
+  display: flex;
+  flex-direction: row;
+
 }
 // ================ Card wrapper ======
 .card-wrapper{
@@ -113,8 +117,17 @@ padding: 15px;
 }
 
 
+.date-top{
+  padding: 3px !important;
+}
+.date-top::-webkit-calendar-picker-indicator{
 
+   background-color: #06805B;
 
+    padding: 10px;
+    border-radius: 2px;
+   
+}
 
 
 
