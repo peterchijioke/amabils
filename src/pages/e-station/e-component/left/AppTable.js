@@ -5,37 +5,40 @@ import CircleIcon from "@mui/icons-material/Circle";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { tableData_E } from "../../data";
+import { useMediaQuery } from "@mui/material";
 export default function AppTable() {
+  const mobile = useMediaQuery("(max-width:900px)");
+  const tablet = useMediaQuery("(min-width:800px)");
   return (
     <div className="table-container">
-      <div style={styles().tWrap}>
+      <div style={styles(mobile).tWrap}>
         <table id="app-table">
           <thead>
             <tr>
               <th>S/N</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Account Name</th>
+              {!mobile && <th>Date</th>}
+              {!mobile && <th>Time</th>}
+              <th>{mobile ? "Account" : "Account Name"}</th>
               <th>Product</th>
               <th>Litres</th>
               <th>Price</th>
-              <th>Station</th>
-              <th>Attendants</th>
+              {!mobile && <th>Station</th>}
+              {!mobile && <th>Attendants</th>}
             </tr>
           </thead>
           <tbody>
             {tableData_E.map((item, index) => (
               <tr key={index + item.id}>
                 <td>{index + 1}</td>
-                <td>{item.date}</td>
-                <td>{item.time}</td>
+                {!mobile && <td>{item.date}</td>}
+                {!mobile && <td>{item.time}</td>}
                 <td>
-                  <div style={styles().userName}>
+                  <div style={styles(mobile, tablet).userName}>
                     <img
                       src={require("../../img/image.svg").default}
                       className="profile-image"
                     />
-                    <label>{item.account_name}</label>
+                    {!mobile && <label>{item.account_name}</label>}
                   </div>
                 </td>
                 <td>
@@ -55,8 +58,8 @@ export default function AppTable() {
                 </td>
                 <td>{item.liters}</td>
                 <td>{item.price}</td>
-                <td>{item.station}</td>
-                <td>{item.attendant}</td>
+                <td>{!mobile && item.station}</td>
+                {!mobile && <td>{item.attendant}</td>}
               </tr>
             ))}
           </tbody>
@@ -90,9 +93,9 @@ const styles = (mobile, tablet) => ({
   },
   userName: {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: !mobile && "row",
     alignItems: "center",
-    justifyContent: "flex-start",
-    marginLeft: "1rem",
+    justifyContent: mobile ? "center" : "flex-start",
+    marginLeft: !mobile && "1rem",
   },
 });
