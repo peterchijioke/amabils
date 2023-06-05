@@ -14,9 +14,7 @@ export default function TableWrapper() {
           <div className="button">Corporate</div>
         </div>
       </div>
-      <div className="table-container">
-        <AppTable />
-      </div>
+      <AppTable />
     </div>
   );
 }

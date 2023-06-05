@@ -1,11 +1,6 @@
 $font:'Poppins';
 $shadow: 0px 0px 26px rgba(0, 0, 0, 0.04);
 ;
-// .table-container{
-//   width: 100%;
-// height: max-content;
-// padding: 10px;
-// }
 #app-table{
   border-collapse: collapse;
   width: 100%;
@@ -39,6 +34,7 @@ $shadow: 0px 0px 26px rgba(0, 0, 0, 0.04);
   width: 40px;
   height: 40px;
   padding: 0px;
+  margin-right: 5px;
   border-radius: 50%;
   background-color: aquamarine;
 }
@@ -60,8 +56,10 @@ $shadow: 0px 0px 26px rgba(0, 0, 0, 0.04);
   }
   .button-wrap{
     display: flex;
+    height: 84px;
     justify-content: flex-end;
       width: 100%;
+      align-items: flex-end;
     }
         @media screen and (max-width:"900px") {
           #app-table{
