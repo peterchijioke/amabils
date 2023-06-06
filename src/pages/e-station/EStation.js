@@ -1,18 +1,18 @@
-import React, { Suspense } from "react";
-import TopWrapper from "./e-component/top/TopWrapper";
-import Wrapper from "./e-component/wrapper/Wrapper";
+import React, { Suspense, lazy } from "react";
+const Wrapper = lazy(() => import("./e-component/wrapper/Wrapper"));
+const TopWrapper = lazy(() => import("./e-component/top/TopWrapper"));
 
 function EStation() {
   return (
-    <div style={Styles.container}>
-      <Suspense fallback={<div>Loading ...</div>}>
+    <div style={styles.container}>
+      <Suspense fallback={<div style={styles.loader}>Loading ...</div>}>
         <TopWrapper />
         <Wrapper />
       </Suspense>
     </div>
   );
 }
-const Styles = {
+const styles = {
   container: {
     width: "100%",
     height: "100%",
@@ -20,6 +20,13 @@ const Styles = {
     display: "flex",
     flexDirection: "column",
     flex: 1,
+  },
+  loader: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100vw",
+    height: "100vh",
   },
 };
 

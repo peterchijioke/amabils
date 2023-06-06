@@ -11,7 +11,7 @@ export default function AppTable() {
   const tablet = useMediaQuery("(min-width:800px)");
   return (
     <div className="table-container">
-      <div style={styles(mobile).tWrap}>
+      <div style={styles(mobile, tablet).tWrap}>
         <table id="app-table">
           <thead>
             <tr>
@@ -81,8 +81,8 @@ export default function AppTable() {
 
 const styles = (mobile, tablet) => ({
   tWrap: {
-    maxHeight: "550px",
-    overflow: "scroll",
+    maxHeight: mobile && "550px",
+    overflow: mobile && "scroll",
     width: "100%",
   },
   pagginator: {
