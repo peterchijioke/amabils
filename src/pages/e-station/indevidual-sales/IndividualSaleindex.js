@@ -1,43 +1,34 @@
-import React from "react";
+import React, { Fragment } from "react";
 import TopWrapper from "../e-component/top/TopWrapper";
 import Button from "./Button";
-import "./indevidual_sale.scss";
+import "./individual_sale.scss";
 import { useMediaQuery } from "@mui/material";
+import SalesTable from "./SalesTable";
 
 export default function IndividualSaleindex() {
   const mobile = useMediaQuery("(max-width:900px)");
   const tablet = useMediaQuery("(min-width:800px)");
   return (
-    <div className="wrap-btn-wrap">
-      <div className="btn-wrap">
-        <Button>{mobile ? "All" : "All Products"}</Button>
-        <Button>PMS</Button>
-        <Button>AGO</Button>
-        <Button>DPK</Button>
-        {/* <Button
-          // style={{
-          // }}
-          title={mobile ? "All" : "All Products"}
-        />
-        <Button
-          title="PMS"
-          // style={{
-          //   margin: !mobile && "0px 5px 0px 5px",
-          // }}
-        />
-        <Button
-          title="AGO"
-          // style={{
-          // }}
-        />
-        <Button
-          title="DPK"
-          // style={{
-          //   margin: !mobile && "0px 5px 0px 5px",
-          // }}
-        /> */}
+    <div style={{ padding: "1rem" }}>
+      <div className="wrap-btn-wrap">
+        <div className="btn-wrap">
+          <Button
+            style={{ backgroundColor: "#06805B", color: "white", border: 0 }}
+          >
+            {mobile ? "All" : "All Products"}
+          </Button>
+          <Button style={{ marginRight: 5, marginLeft: 5 }}>PMS</Button>
+          <Button style={{ marginRight: 5 }}>AGO</Button>
+          <Button>DPK</Button>
+        </div>
+        <input
+          className="search-"
+          type="text"
+          id="fname"
+          placeholder="Search"
+        ></input>
       </div>
-      <input className="search-" type="text" id="fname" name="fname"></input>
+      <SalesTable />
     </div>
   );
 }
