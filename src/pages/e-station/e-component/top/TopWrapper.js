@@ -14,7 +14,7 @@ import { useMediaQuery } from "@mui/material";
 
 const data = [];
 
-function TopWrapper(props) {
+function TopWrapper({ disableCard, ...props }) {
   const mobile = useMediaQuery("(max-width:900px)");
   const tablet = useMediaQuery("(min-width:700px)");
   return (
@@ -24,7 +24,10 @@ function TopWrapper(props) {
           <AppSelect data={data} />
           <AppDate />
         </div>
-        <div className="card-wrapper">
+        <div
+          style={{ display: disableCard ? "none" : null }}
+          className="card-wrapper"
+        >
           <TopCard
             arrowStyle={{ left: !mobile ? "30px" : tablet ? "25rem" : "45px" }}
             icon={
