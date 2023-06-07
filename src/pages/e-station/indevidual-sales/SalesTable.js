@@ -8,6 +8,8 @@ import {
   Note,
 } from "@mui/icons-material";
 import { useMediaQuery } from "@mui/material";
+import { tableData_S } from "../data";
+import CircleIcon from "@mui/icons-material/Circle";
 
 export default function SalesTable() {
   const mobile = useMediaQuery("(max-width:600px)");
@@ -51,7 +53,21 @@ export default function SalesTable() {
                   </div>
                 </td>
                 <td>{item.vehicle_no}</td>
-                <td>{item.product}</td>
+                <td>
+                  <CircleIcon
+                    style={{
+                      fontSize: 8,
+                      marginRight: 5,
+                      color:
+                        item.product == "DPK"
+                          ? "#35393E"
+                          : item.product == "PMS"
+                          ? "#399A19"
+                          : "#FFA010",
+                    }}
+                  />
+                  {item.product}
+                </td>
                 <td>{item.liters}</td>
                 <td>{item.price}</td>
                 {!mobile && <td>{item.station}</td>}

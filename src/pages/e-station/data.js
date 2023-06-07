@@ -171,3 +171,62 @@ export const tableData_E = [
     attendant: "Amina Ojo",
   },
 ];
+
+export const tableData_S = [
+  {
+    id: `${Math.random()}`,
+    date: moment().format("MMM Do YY"),
+    time: moment().format("LT"),
+    account_name: "Olumide Olaseun",
+    vehicle_no: "JK-1234-3",
+    product: "AGO",
+    liters: "20.5",
+    price: "15,000.00",
+    image:
+      "https://media.geeksforgeeks.org/wp-content/uploads/20210425000233/test-300x297.png",
+    station: "Amaco Uka",
+    attendant: "Amina Ojo",
+  },
+  {
+    id: `${Math.random()}`,
+    date: moment().format("MMM Do YY"),
+    time: moment().format("LT"),
+    account_name: "Olumide Olaseun",
+    vehicle_no: "JK-1234-3",
+    product: "AGO",
+    liters: "20.5",
+    price: "15,000.00",
+    image:
+      "https://media.geeksforgeeks.org/wp-content/uploads/20210425000233/test-300x297.png",
+    station: "Amaco Uka",
+    attendant: "Amina Ojo",
+  },
+  {
+    id: `${Math.random()}`,
+    date: moment().format("MMM Do YY"),
+    time: moment().format("LT"),
+    account_name: "Mike Kola",
+    vehicle_no: "JK-1234-3",
+    product: "PMS",
+    liters: "20.5",
+    price: "15,000.00",
+    image:
+      "https://media.geeksforgeeks.org/wp-content/uploads/20210425000233/test-300x297.png",
+    station: "Amaco Uka",
+    attendant: "Amina Ojo",
+  },
+  {
+    id: `${Math.random()}`,
+    date: moment().format("MMM Do YY"),
+    time: moment().format("LT"),
+    account_name: "Chi Chijioke",
+    vehicle_no: "JK-1234-3",
+    product: "PMS",
+    liters: "20.5",
+    price: "15,000.00",
+    image:
+      "https://media.geeksforgeeks.org/wp-content/uploads/20210425000233/test-300x297.png",
+    station: "Amaco Uka",
+    attendant: "Amina Ojo",
+  },
+];
