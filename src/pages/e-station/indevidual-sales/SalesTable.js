@@ -1,79 +1,139 @@
 import React from "react";
 import "./individual_sale.scss";
 import moment from "moment";
-import { Edit, Note } from "@mui/icons-material";
+import {
+  Edit,
+  KeyboardArrowLeft,
+  KeyboardArrowRight,
+  Note,
+} from "@mui/icons-material";
+import { useMediaQuery } from "@mui/material";
 
 export default function SalesTable() {
+  const mobile = useMediaQuery("(max-width:600px)");
+  const tablet = useMediaQuery("(max-width:900px)");
   return (
     <div>
-      <table id="sales-table-">
-        <thead>
-          <tr>
-            <th>S/N</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Account Name</th>
-            <th>Vehicle No</th>
-            <th>Product</th>
-            <th>Litres</th>
-            <th>Amount</th>
-            <th>Station</th>
-            <th>Attendant</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {tableData_S.map((item, index) => (
-            <tr key={Math.random()}>
-              <td>{index + 1}</td>
-              <td>{item.date}</td>
-              <td>{item.time}</td>
-              <td>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "start",
-                  }}
-                >
-                  <ProfileImg item={item} />
-                  {item.account_name}
-                </div>
-              </td>
-              <td>{item.vehicle_no}</td>
-              <td>{item.product}</td>
-              <td>{item.liters}</td>
-              <td>{item.price}</td>
-              <td>{item.station}</td>
-              <td>{item.attendant}</td>
-              <td>
-                <NoteIcon onClick={() => {}} />
-              </td>
+      <div style={{ overflow: mobile && "scroll", width: "100%" }}>
+        <table id="sales-table-">
+          <thead>
+            <tr>
+              {!mobile && <th>S/N</th>}
+              {!mobile && <th>Date</th>}
+              {!mobile && <th>Time</th>}
+              <th>Account Name</th>
+              <th>Vehicle No</th>
+              <th>Product</th>
+              <th>Litres</th>
+              <th>Amount</th>
+              {!mobile && <th>Station</th>}
+              {!mobile && <th>Attendant</th>}
+              <th>Action</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-      <div className="footer-">
-        <div className="inner-footer-"></div>
+          </thead>
+          <tbody>
+            {tableData_S.map((item, index) => (
+              <tr key={Math.random()}>
+                {!mobile && <td>{index + 1}</td>}
+                {!mobile && <td>{item.date}</td>}
+                {!mobile && <td>{item.time}</td>}
+                <td>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      justifyContent: "start",
+                    }}
+                  >
+                    <ProfileImg item={item} />
+                    {!mobile && item.account_name}
+                  </div>
+                </td>
+                <td>{item.vehicle_no}</td>
+                <td>{item.product}</td>
+                <td>{item.liters}</td>
+                <td>{item.price}</td>
+                {!mobile && <td>{item.station}</td>}
+                {!mobile && <td>{item.attendant}</td>}
+                <td>
+                  <NoteIcon onClick={() => {}} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
+      <Footer />
     </div>
   );
 }
 
 const NoteIcon = ({ onClick }) => (
-  <div onClick={onClick} style={styles.icon}>
+  <div onClick={onClick} style={styles().icon}>
     <Note style={{ color: "white", fontSize: 18 }} />
   </div>
 );
 
 const ProfileImg = ({ onClick, item }) => (
-  <div onClick={onClick} style={{ ...styles.icon, marginRight: 3 }}>
+  <div onClick={onClick} style={{ ...styles().icon, marginRight: 3 }}>
     <img src={item.image} style={{ width: "100", height: "100%" }} />
   </div>
 );
 
-const styles = {
+const Footer = ({}) => (
+  <div className="footer-">
+    <div className="inner-footer-">
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <Button
+          style={{
+            border: "1px solid #06805B",
+            background: "#06805B",
+            color: "white",
+          }}
+        />
+        <Button
+          style={{
+            background: "white",
+            color: "#515151",
+            border: "1px solid #515151",
+          }}
+          data="NGN 245000.00"
+        />
+      </div>
+      <Pagginator
+        onClickNext={() => {
+          alert("prtrt");
+        }}
+        onClickPrevious={() => {}}
+      />
+    </div>
+  </div>
+);
+const Button = ({ style, data = "Total Amount" }) => (
+  <div style={style} className="total-btn">
+    <label>{data}</label>
+  </div>
+);
+
+const Pagginator = ({ onClickNext, onClickPrevious }) => (
+  <div className="button-wrap">
+    <div style={styles().pagginator}>
+      <button
+        onClick={onClickPrevious}
+        style={{ marginRight: 2 }}
+        className="button-sales-pagginator"
+      >
+        <KeyboardArrowLeft />
+      </button>
+      <button onClick={onClickNext} className="button-sales-pagginator">
+        <KeyboardArrowRight />
+      </button>
+    </div>
+  </div>
+);
+
+const styles = (mobile) => ({
   icon: {
     width: 30,
     height: 30,
@@ -84,63 +144,8 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
   },
-};
-
-const tableData_S = [
-  {
-    id: `${Math.random()}`,
-    date: moment().format("MMM Do YY"),
-    time: moment().format("LT"),
-    account_name: "Olumide Olaseun",
-    vehicle_no: "JK-1234-3",
-    product: "AGO",
-    liters: "20.5",
-    price: "15,000.00",
-    image:
-      "https://media.geeksforgeeks.org/wp-content/uploads/20210425000233/test-300x297.png",
-    station: "Amaco Uka",
-    attendant: "Amina Ojo",
+  pagginator: {
+    display: "flex",
+    flexDirection: "row",
   },
-  {
-    id: `${Math.random()}`,
-    date: moment().format("MMM Do YY"),
-    time: moment().format("LT"),
-    account_name: "Olumide Olaseun",
-    vehicle_no: "JK-1234-3",
-    product: "AGO",
-    liters: "20.5",
-    price: "15,000.00",
-    image:
-      "https://media.geeksforgeeks.org/wp-content/uploads/20210425000233/test-300x297.png",
-    station: "Amaco Uka",
-    attendant: "Amina Ojo",
-  },
-  {
-    id: `${Math.random()}`,
-    date: moment().format("MMM Do YY"),
-    time: moment().format("LT"),
-    account_name: "Mike Kola",
-    vehicle_no: "JK-1234-3",
-    product: "PMS",
-    liters: "20.5",
-    price: "15,000.00",
-    image:
-      "https://media.geeksforgeeks.org/wp-content/uploads/20210425000233/test-300x297.png",
-    station: "Amaco Uka",
-    attendant: "Amina Ojo",
-  },
-  {
-    id: `${Math.random()}`,
-    date: moment().format("MMM Do YY"),
-    time: moment().format("LT"),
-    account_name: "Chi Chijioke",
-    vehicle_no: "JK-1234-3",
-    product: "PMS",
-    liters: "20.5",
-    price: "15,000.00",
-    image:
-      "https://media.geeksforgeeks.org/wp-content/uploads/20210425000233/test-300x297.png",
-    station: "Amaco Uka",
-    attendant: "Amina Ojo",
-  },
-];
+});
