@@ -1,8 +1,6 @@
 import React from "react";
 import "./individual_sale.scss";
-import moment from "moment";
 import {
-  Edit,
   KeyboardArrowLeft,
   KeyboardArrowRight,
   Note,
@@ -110,7 +108,7 @@ const Footer = ({}) => (
         />
         <Button
           style={{
-            background: "white",
+            background: "#EFFFFA",
             color: "#515151",
             border: "1px solid #515151",
           }}
@@ -126,8 +124,8 @@ const Footer = ({}) => (
     </div>
   </div>
 );
-const Button = ({ style, data = "Total Amount" }) => (
-  <div style={style} className="total-btn">
+const Button = ({ style, data = "Total Amount", ...props }) => (
+  <div style={style} className="total-btn" {...props}>
     <label>{data}</label>
   </div>
 );
