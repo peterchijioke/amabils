@@ -10,8 +10,8 @@ export default function App() {
     <div style={{ margin: "0px", padding: "0px" }}>
       {/* <EStation /> */}
       {/* <IndevidualSales /> */}
-      {/* <CorporateSales /> */}
-      <Sales />
+      <CorporateSales />
+      {/* <Sales /> */}
     </div>
   );
 }
